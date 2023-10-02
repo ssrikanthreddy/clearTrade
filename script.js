@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Code inside this block will run when the DOM is fully loaded
+    var londonButton = document.querySelector(".tablinks.def:nth-child(1)");
+        londonButton.click();
+    var londonButton2 = document.querySelector(".tablinks.def2:nth-child(1)");
+        londonButton2.click();
 
     // Example: Adding an event listener to a button
     const myButton = document.getElementById('myButton');

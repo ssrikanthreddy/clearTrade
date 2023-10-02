@@ -15,15 +15,13 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Hello, Bootstrap!</h1>
-      <p>This is a basic example of a Bootstrap page.</p>
+      <h1>Hello, Welcome to clearTrade!</h1>
+      <p></p>
+      <p>Units of trade: Carton of 6.(Number are for per-unit)</p>
 
       <!-- Tab links 1 -->
       <div class="tab">
-        <button
-          class="tablinks def"
-          onclick="openTab(event, 'Supplier', 'group1')"
-        >
+        <button class="tablinks def" onclick="openTab(event, 'Supplier', 'group1')">
           Supplier
         </button>
         <button class="tablinks" onclick="openTab(event, 'Retailer', 'group1')">
@@ -37,27 +35,27 @@
       <!-- Tab content -->
       <div id="Supplier" class="tabcontent group1">
         <h3>Supplier</h3>
-        <p>Supplier is the capital city of England.</p>
+        <p>Production Cost : <input type="number" placeholder="purchase cost"> ₹ </p>
+        <p>Selling Price : <input type="number" placeholder="selling price"> ₹ </p>
       </div>
 
       <div id="Retailer" class="tabcontent group1">
         <h3>Retailer</h3>
-        <p>Retailer is the capital of France.</p>
+        <p>Purchase Cost : <input type="number" placeholder="purchase cost"> ₹ </p>
+        <p>Re-sale Value : <input type="number" placeholder="resale value"> ₹ </p>
       </div>
 
       <div id="Customer" class="tabcontent group1">
         <h3>Customer</h3>
-        <p>Tokyo is the capital of Japan.</p>
+        <p>Purchase Cost : <input type="number" placeholder="purchase cost"> ₹ </p>
+        <br><br>
       </div>
 
-      <br /><br />
+      <br><br>
 
       <!-- Tab links 2 -->
       <div class="tab">
-        <button
-          class="tablinks def2"
-          onclick="openTab(event, 'Graph 1', 'group2')"
-        >
+        <button class="tablinks def2" onclick="openTab(event, 'Graph 1', 'group2')">
           Graph 1
         </button>
         <button class="tablinks" onclick="openTab(event, 'Graph 2', 'group2')">
@@ -84,6 +82,7 @@
         <p>Graph 3 is the capital of Japan.</p>
       </div>
     </div>
+
     <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

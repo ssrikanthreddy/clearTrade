@@ -35,6 +35,7 @@ p {
 }
 
 .tab button {
+  flex-grow: 1;
   color: #285430;
   background-color: inherit;
   float: left;

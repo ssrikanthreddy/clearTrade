@@ -9,12 +9,11 @@
 </div>
 
 <div align="center">
-<!--
+  
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/[Your GitHub Username]/ClearTrade.svg)](https://github.com/[Your GitHub Username]/ClearTrade/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/[Your GitHub Username]/ClearTrade)](https://github.com/[Your GitHub Username]/ClearTrade/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/Srik04/clearTrade.svg)](https://github.com/Srik04/clearTrade/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Srik04/clearTrade)](https://github.com/Srik04/clearTrade/pulls)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE.md)
--->
 </div>
 
 <br>

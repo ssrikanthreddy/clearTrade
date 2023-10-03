@@ -1,19 +1,31 @@
 body {
   display: flex;
   justify-content: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #E9E5D6;
+  /* background-image: url('./utils/clear\ Trade\ background.png'); 
+  background-size: cover; 
+  background-position: center; */
 }
 
-.main-tab {
+#visualizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.tab-view {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 5rem 2.5rem;
   background-color: #a4be7b;
   padding: 40px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(68, 120, 87, 0.2);
+  max-width: 100%;
 }
 
 h1,h3 {

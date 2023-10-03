@@ -3,6 +3,7 @@
 
       console.log("Loaded OK");
 
+
       //Make vars for each input field
       var supply1 = document.getElementById("supplier1");
       var supply2 = document.getElementById("supplier2");
@@ -22,6 +23,11 @@
           londonButton.click();
       var londonButton2 = document.querySelector(".tablinks.def2:nth-child(1)");
           londonButton2.click();
+
+      document.getElementById("myInput").addEventListener("input", function() {
+        if (this.value < this.min) this.value = this.min;
+        if (this.value > this.max) this.value = this.max;
+    });
   });
 
   function openTab(evt, cityName, group) {

@@ -1,11 +1,11 @@
 <br>
 
 <div id="top">
-<!-- <p align="center">
-  <a href="[Your Project Repository URL]" target="_blank" rel="noopener noreferrer">
-    <img width="600" src="[Your Project Logo URL]" alt="ClearTrade-Logo">
+<p align="center">
+  <a href="https://github.com/Srik04/clearTrade" target="_blank" rel="noopener noreferrer">
+    <img width="250" src="https://i.postimg.cc/zv1WWPsD/Clear-Trade-Logo-photoshopped.png" alt="ClearTrade-Logo">
   </a>
-</p> -->
+</p> 
 </div>
 
 <div align="center">

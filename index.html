@@ -1,98 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Clear Trade</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <div class="container mt-5">
-      <h1>Hello, Welcome to clearTrade!</h1>
-      <p></p>
-      <p>Units of trade: Carton of 6.(Number are for per-unit)</p>
 
-      <!-- Tab links 1 -->
-      <div class="tab">
-        <button class="tablinks def" onclick="openTab(event, 'Supplier', 'group1')">
-          Supplier
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Retailer', 'group1')">
-          Retailer
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Customer', 'group1')">
-          Customer
-        </button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Clear Trade</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
 
-      <!-- Tab content -->
-      <div id="Supplier" class="tabcontent group1">
-        <h3>Supplier</h3>
-        <br>
-        <p>Production Cost : <input type="number" id="supplier1" value="0" placeholder="purchase cost"> ₹ </p>
-        <br>
-        <p>Selling Price : <input type="number" id="supplier2" value="0" placeholder="selling price"> ₹ </p>
-      </div>
+<body>
+  <div class="main-tab">
+    <h1>Hello, Welcome to clearTrade!</h1>
+    <p>Units of trade: Carton of 6.(Number are for per-unit)</p>
 
-      <div id="Retailer" class="tabcontent group1">
-        <h3>Retailer</h3>
-        <br>
-        <p>Purchase Cost : <input type="number" id="retail1" value="0" placeholder="purchase cost"> ₹ </p>
-        <br>
-        <p>Re-sale Value : <input type="number" id="retail2" value="0" placeholder="resale value"> ₹ </p>
-      </div>
-
-      <div id="Customer" class="tabcontent group1">
-        <h3>Customer</h3>
-        <br>
-        <p>Purchase Cost : <input type="number" id="customer1" value="0" placeholder="purchase cost"> ₹ </p>
-        <br><br>
-      </div>
-
-      <br><br>
-
-      <!-- Tab links 2 -->
-      <div class="tab">
-        <button class="tablinks def2" onclick="openTab(event, 'Graph 1', 'group2')">
-          Graph 1
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Graph 2', 'group2')">
-          Graph 2
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Graph 3', 'group2')">
-          Graph 3
-        </button>
-      </div>
-
-      <!-- Tab content -->
-      <div id="Graph 1" class="tabcontent group2">
-        <h3>Graph 1</h3>
-        <p id="graph1">Graph 1 is the capital city of England.</p>
-      </div>
-
-      <div id="Graph 2" class="tabcontent group2">
-        <h3>Graph 2</h3>
-        <p id="graph2">Graph 2 is the capital of France.</p>
-      </div>
-
-      <div id="Graph 3" class="tabcontent group2">
-        <h3>Graph 3</h3>
-        <p id="graph3">Graph 3 is the capital of Japan.</p>
-      </div>
+    <!-- Tab links 1 -->
+    <div class="tab">
+      <button class="tablinks def" onclick="openTab(event, 'Supplier', 'group1')">
+        Supplier
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Retailer', 'group1')">
+        Retailer
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Customer', 'group1')">
+        Customer
+      </button>
     </div>
 
-    <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Your custom JavaScript (if any) -->
-    <script src="script.js"></script>
-  </body>
+    <!-- Tab content -->
+    <div id="Supplier" class="tabcontent group1">
+      <h3>Supplier</h3>
+      <br>
+      <p>Production Cost : <input type="number" id="supplier1" value="0" placeholder="purchase cost"> ₹ </p>
+      <br>
+      <p>Selling Price : <input type="number" id="supplier2" value="0" placeholder="selling price"> ₹ </p>
+    </div>
+
+    <div id="Retailer" class="tabcontent group1">
+      <h3>Retailer</h3>
+      <br>
+      <p>Purchase Cost : <input type="number" id="retail1" value="0" placeholder="purchase cost"> ₹ </p>
+      <br>
+      <p>Re-sale Value : <input type="number" id="retail2" value="0" placeholder="resale value"> ₹ </p>
+    </div>
+
+    <div id="Customer" class="tabcontent group1">
+      <h3>Customer</h3>
+      <br>
+      <p>Purchase Cost : <input type="number" id="customer1" value="0" placeholder="purchase cost"> ₹ </p>
+      <br><br>
+    </div>
+
+    <br><br>
+
+    <!-- Tab links 2 -->
+    <div class="tab">
+      <button class="tablinks def2" onclick="openTab(event, 'Graph 1', 'group2')">
+        Graph 1
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Graph 2', 'group2')">
+        Graph 2
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Graph 3', 'group2')">
+        Graph 3
+      </button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Graph 1" class="tabcontent group2">
+      <h3>Graph 1</h3>
+      <p id="graph1">Graph 1 is the capital city of England.</p>
+    </div>
+
+    <div id="Graph 2" class="tabcontent group2">
+      <h3>Graph 2</h3>
+      <p id="graph2">Graph 2 is the capital of France.</p>
+    </div>
+
+    <div id="Graph 3" class="tabcontent group2">
+      <h3>Graph 3</h3>
+      <p id="graph3">Graph 3 is the capital of Japan.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Your custom JavaScript (if any) -->
+  <script src="script.js"></script>
+</body>
+
 </html>

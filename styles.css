@@ -1,19 +1,23 @@
 body {
+  display: flex;
+  justify-content: center;
   font-family: Arial, sans-serif;
   background-color: #e5d9b6;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+.main-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #a4be7b;
-  padding: 20px;
+  padding: 40px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   color: #285430;
+  margin: 0;
 }
 
 p {
@@ -23,6 +27,8 @@ p {
 }
 
 .tab {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   border-radius: 5px;
   background-color: #e5d9b6;

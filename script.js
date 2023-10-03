@@ -56,6 +56,10 @@
 
     //get element by id and output values
     document.getElementById("graph1").innerHTML = `Production Cost: ${supply1} <BR> Selling Price: ${supply2}`;
+    document.getElementById("graph1").innerHTML.style.display = 'block';
     document.getElementById("graph2").innerHTML = `Purchase Cost: ${retail1} <BR> Selling Price: ${retail2}`;
+    document.getElementById("graph2").innerHTML.style.display = 'block';
     document.getElementById("graph3").innerHTML = `Buying Price: ${customer1}`;
+    document.getElementById("graph3").innerHTML.style.display = 'block';
+
   }

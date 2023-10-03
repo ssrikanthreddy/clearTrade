@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: Arial, sans-serif;
-  background-color: #e5d9b6;
+  background-color: #E9E5D6;
 }
 
 .main-tab {
@@ -42,22 +42,29 @@ p {
   margin-top: 1.2rem;
   overflow: hidden;
   border-radius: 5px;
-  background-color: #e5d9b6;
+  background-color: #EDF1D6;
 }
 
 .tab button {
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   flex-grow: 1;
   color: #285430;
   background-color: inherit;
   border: 5px;
   border-color: #285430;
+  outline: 1px solid #a4be7b;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
 }
 
 .tab button:hover {
+  color: #e5d9b6;
+  background-color: #285430c3;
+}
+
+.tab button:focus {
   color: #e5d9b6;
   background-color: #285430c3;
 }

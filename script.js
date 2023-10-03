@@ -1,5 +1,78 @@
+  var chart1, chart2, chart3;
+  var dataArray = [0, 0, 0, 0, 0]; // Initialize with default values
   document.addEventListener('DOMContentLoaded', function() {
       // Code inside this block will run when the DOM is fully loaded
+
+      //Graph space START
+      // Initialize the first chart (Graph 1)
+      var ctx1 = document.getElementById('g1').getContext('2d');
+      chart1 = new Chart(ctx1, {
+          type: 'bar',
+          data: {
+              labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
+              datasets: [{
+                  label: 'Data',
+                  data: [10, 20, 30, 40, 50],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+
+      // Initialize the second chart (Graph 2)
+      var ctx2 = document.getElementById('g2').getContext('2d');
+      chart2 = new Chart(ctx2, {
+          type: 'bar',
+          data: {
+              labels: ['Label A', 'Label B', 'Label C', 'Label D', 'Label E'],
+              datasets: [{
+                  label: 'Data',
+                  data: [5, 10, 15, 20, 25],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+
+        // Initialize the third chart (Graph 3)
+      var ctx3 = document.getElementById('g3').getContext('2d');
+      chart3 = new Chart(ctx3, {
+          type: 'bar',
+          data: {
+              labels: ['Label X', 'Label Y', 'Label Z'],
+              datasets: [{
+                  label: 'Data',
+                  data: [8, 16, 24],
+                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                  borderColor: 'rgba(75, 192, 192, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+    //Graph Space end
 
       console.log("Loaded OK");
 
@@ -11,11 +84,11 @@
       var customer1 = document.getElementById("customer1");
 
       //Add even listeners to each field var
-      supply1.addEventListener("input", displayValues);
-      supply2.addEventListener("input", displayValues);
-      retail1.addEventListener("input", displayValues);
-      retail2.addEventListener("input", displayValues);
-      customer1.addEventListener("input", displayValues);
+      supply1.addEventListener("input", update1);
+      supply2.addEventListener("input", update1);
+      retail1.addEventListener("input", update2);
+      retail2.addEventListener("input", update2);
+      customer1.addEventListener("input", update3);
 
       //Open tab by default
       var londonButton = document.querySelector(".tablinks.def:nth-child(1)");
@@ -45,21 +118,51 @@
       evt.currentTarget.className += " active";
   } 
 
-  function displayValues(){
-    console.log("Called");
-    //get values of an element with id
-    var supply1 = document.getElementById("supplier1").value;
-    var supply2 = document.getElementById("supplier2").value;
-    var retail1 = document.getElementById("retail1").value;
-    var retail2 = document.getElementById("retail2").value;
-    var customer1 = document.getElementById("customer1").value;
+  function updateData(){
+    dataArray[0] = document.getElementById("supplier1").value;
+    dataArray[1] = document.getElementById("supplier2").value;
+    dataArray[2] = document.getElementById("retail1").value;
+    dataArray[3] = document.getElementById("retail2").value;
+    dataArray[4] = document.getElementById("customer1").value;
+  }
 
-    //get element by id and output values
-    document.getElementById("graph1").innerHTML = `Production Cost: ${supply1} <BR> Selling Price: ${supply2}`;
-    document.getElementById("graph1").innerHTML.style.display = 'block';
-    document.getElementById("graph2").innerHTML = `Purchase Cost: ${retail1} <BR> Selling Price: ${retail2}`;
-    document.getElementById("graph2").innerHTML.style.display = 'block';
-    document.getElementById("graph3").innerHTML = `Buying Price: ${customer1}`;
-    document.getElementById("graph3").innerHTML.style.display = 'block';
 
+  function update1() {
+    updateData();
+    var profit = [];
+
+    //Profit 1
+    var making = dataArray[0];
+    var selling = dataArray[1];
+    var margin1 = (selling-making)*100/making;
+
+    //Profit 2
+    making = dataArray[2];
+    selling = dataArray[3];
+    var margin2 = (selling-making)*100/making;
+
+    //Profit 3
+    making = dataArray[4];
+    selling = making*0.75;
+    var margin3 = (selling-making)*100/making;
+    
+    // Update the chart data and re-render
+    chart1.data.datasets[0].data = [margin1, margin2];
+    chart1.update();
+  }
+  
+  function update2() {
+    updateData();
+    
+    // Update the chart data and re-render
+    chart2.data.datasets[0].data = dataArray;
+    chart2.update();
+  }
+  
+  function update3() {
+    updateData();
+  
+    // Update the chart data and re-render
+    chart3.data.datasets[0].data = dataArray;
+    chart3.update();
   }

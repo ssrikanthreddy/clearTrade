@@ -55,38 +55,38 @@
     <!-- Tab links 2 -->
     <div class="tab">
       <button class="tablinks def2" onclick="openTab(event, 'Graph 1', 'group2')">
-        Graph 1
+        Profit Margin
       </button>
       <button class="tablinks" onclick="openTab(event, 'Graph 2', 'group2')">
-        Graph 2
+        Total Value
       </button>
       <button class="tablinks" onclick="openTab(event, 'Graph 3', 'group2')">
-        Graph 3
+        Exploitation
       </button>
     </div>
 
     <!-- Tab content -->
     <div id="Graph 1" class="tabcontent group2">
-      <h3>Graph 1</h3>
+      <h3>Graph 1: Profit Margin</h3>
+      <canvas id="g1" width="400" height="400"></canvas>
       <p id="graph1">Graph 1 is the capital city of England.</p>
     </div>
 
     <div id="Graph 2" class="tabcontent group2">
-      <h3>Graph 2</h3>
+      <h3>Graph 2: Total Value</h3>
+      <canvas id="g2" width="400" height="400"></canvas>
       <p id="graph2">Graph 2 is the capital of France.</p>
     </div>
 
     <div id="Graph 3" class="tabcontent group2">
-      <h3>Graph 3</h3>
+      <h3>Graph 3: Exploitation</h3>
+      <canvas id="g3" width="400" height="400"></canvas>
       <p id="graph3">Graph 3 is the capital of Japan.</p>
     </div>
   </div>
 
-  <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Your custom JavaScript (if any) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 

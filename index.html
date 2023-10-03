@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Clear Trade</title>
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="main-tab">
     <h1>Hello, Welcome to clearTrade!</h1>
-    <p>Units of trade: Carton of 6.(Number are for per-unit)</p>
+    <p class="units">Units of trade: Carton of 6.(Number are for per-unit)</p>
 
     <!-- Tab links 1 -->
     <div class="tab">
@@ -29,28 +32,25 @@
     <!-- Tab content -->
     <div id="Supplier" class="tabcontent group1">
       <h3>Supplier</h3>
-      <br>
-      <p>Production Cost : <input type="number" id="supplier1" value="0" placeholder="purchase cost"> ₹ </p>
-      <br>
-      <p>Selling Price : <input type="number" id="supplier2" value="0" placeholder="selling price"> ₹ </p>
+      <label>Production Cost(₹):</label>
+      <input class="input-field" type="number" id="supplier1">
+      <label>Selling Price(₹):</label>
+      <input class="input-field" type="number" id="supplier2">
     </div>
 
     <div id="Retailer" class="tabcontent group1">
       <h3>Retailer</h3>
-      <br>
-      <p>Purchase Cost : <input type="number" id="retail1" value="0" placeholder="purchase cost"> ₹ </p>
-      <br>
-      <p>Re-sale Value : <input type="number" id="retail2" value="0" placeholder="resale value"> ₹ </p>
+      <label>Purchase Cost(₹):</label>
+      <input class="input-field" type="number" id="retail1">
+      <label>Re-sale Value(₹):</label>
+      <input class="input-field" type="number" id="retail2">
     </div>
 
     <div id="Customer" class="tabcontent group1">
       <h3>Customer</h3>
-      <br>
-      <p>Purchase Cost : <input type="number" id="customer1" value="0" placeholder="purchase cost"> ₹ </p>
-      <br><br>
+      <label>Purchase Cost(₹):</label>
+      <input class="input-field" type="number" id="customer1">
     </div>
-
-    <br><br>
 
     <!-- Tab links 2 -->
     <div class="tab">

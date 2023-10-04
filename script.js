@@ -7,7 +7,7 @@
       // Initialize the first chart (Graph 1)
       var ctx1 = document.getElementById('g1').getContext('2d');
       chart1 = new Chart(ctx1, {
-          type: 'bar',
+          type: 'line',
           data: {
               labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
               datasets: [{

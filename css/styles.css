@@ -1,7 +1,7 @@
 body {
   display: flex;
   justify-content: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #E9E5D6;
   /* background-image: url('./utils/clear\ Trade\ background.png'); 
   background-size: cover; 
@@ -21,31 +21,32 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 5rem 2.5rem;
-  background-color: #a4be7b;
+  background-color: #A4BE7B;
   padding: 40px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(68, 120, 87, 0.2);
   max-width: 100%;
 }
 
-h1,h3 {
-  font-family: 'Poppins', sans-serif;
+h1,
+h3 {
+  font-family: "Poppins", sans-serif;
   color: #285430;
   margin: 0;
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #285430b9;
+  color: rgba(40, 84, 48, 0.7254901961);
 }
 
 .units {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
-  color: #285430b9;
+  color: rgba(40, 84, 48, 0.7254901961);
 }
 
 .tab {
@@ -54,11 +55,11 @@ p {
   margin-top: 1.2rem;
   overflow: hidden;
   border-radius: 5px;
-  background-color: #EDF1D6;
+  background-color: #E9E5D6;
 }
 
 .tab button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   flex-grow: 1;
   color: #285430;
@@ -72,21 +73,21 @@ p {
 }
 
 .tab button:hover {
-  color: #e5d9b6;
-  background-color: #285430c3;
+  color: #E9E5D6;
+  background-color: rgba(40, 84, 48, 0.7647058824);
 }
 
 .tab button:focus {
-  color: #e5d9b6;
-  background-color: #285430c3;
+  color: #E9E5D6;
+  background-color: rgba(40, 84, 48, 0.7647058824);
 }
 
 .tabcontent label {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: 400;
-  color: #285430b9;
+  color: rgba(40, 84, 48, 0.7254901961);
 }
 
 .tabcontent input {
@@ -95,14 +96,16 @@ p {
   height: 1.8rem;
   background-color: #E9E5D6;
   padding: 4px;
-  border: #e5d9b6;
+  border: #E9E5D6;
   border-radius: 2.5px;
 }
 
 .tabcontent {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 1.5rem 0;
 }
+
+/*# sourceMappingURL=styles.css.map */

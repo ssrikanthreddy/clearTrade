@@ -1,0 +1,114 @@
+$main-color: #E9E5D6;
+$secondary-color: #A4BE7B;
+$dark-colour: #285430;
+$Poppins: 'Poppins', sans-serif;
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: $Poppins;
+  background-color: $main-color;
+  /* background-image: url('./utils/clear\ Trade\ background.png'); 
+  background-size: cover; 
+  background-position: center; */
+}
+
+#visualizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.tab-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem 2.5rem;
+  background-color: $secondary-color;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(68, 120, 87, 0.2);
+  max-width: 100%;
+}
+
+h1,
+h3 {
+  font-family: $Poppins;
+  color: $dark-colour;
+  margin: 0;
+}
+
+p {
+  font-family: $Poppins;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #285430b9;
+}
+
+.units {
+  font-family: $Poppins;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #285430b9;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: $main-color;
+}
+
+.tab button {
+  font-family: $Poppins;
+  font-weight: 400;
+  flex-grow: 1;
+  color: $dark-colour;
+  background-color: inherit;
+  border: 5px;
+  border-color: $dark-colour;
+  outline: 1px solid #a4be7b;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  color: $main-color;
+  background-color: #285430c3;
+}
+
+.tab button:focus {
+  color: $main-color;
+  background-color: #285430c3;
+}
+
+.tabcontent label {
+  font-family: $Poppins;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #285430b9;
+}
+
+.tabcontent input {
+  color: $dark-colour;
+  font-size: 1rem;
+  height: 1.8rem;
+  background-color: $main-color;
+  padding: 4px;
+  border: $main-color;
+  border-radius: 2.5px;
+}
+
+.tabcontent {
+  font-family: $Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem 0;
+}

@@ -19,7 +19,7 @@ body {
 .tab-view {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   margin: 5rem 2.5rem;
   background-color: #A4BE7B;
   padding: 40px;

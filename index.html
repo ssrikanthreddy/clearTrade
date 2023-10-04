@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Clear Trade</title>
+  <title>clearTrade</title>
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,9 @@
 </head>
 
 <body>
-<div id="visualizer">
-  <div class="tab-view">
+  <div id="visualizer">
+<section id="tab-view">
+  <div>
     <h1>Hello, Welcome to clearTrade!</h1>
     <p class="units">Units of trade: Carton of 6.(Number are for per-unit)</p>
 
@@ -46,11 +47,11 @@
     <div id="Importer" class="tabcontent group1">
       <h3>Importer</h3>
       <label>Acquiring Cost(₹):</label>
-      <input class="input-field" type="number" id="supplier1">
+      <input class="input-field" type="number" id="importer1">
       <label>Tranportation Cost(₹):</label>
-      <input class="input-field" type="number" id="supplier1">
+      <input class="input-field" type="number" id="importer2">
       <label>Wholesale Price(₹):</label>
-      <input class="input-field" type="number" id="supplier2">
+      <input class="input-field" type="number" id="importer3">
     </div>
 
     <div id="Retailer" class="tabcontent group1">
@@ -68,8 +69,9 @@
     </div>
 
   </div>
-
-  <div id="graph-view" class="tab-view">
+</section>
+<section id="graph-view">
+  <div>
     <div class="tab">
       <button class="tablinks def2" onclick="openTab(event, 'Graph 1', 'group2')">
         Profit Margin
@@ -78,24 +80,25 @@
         Total Value
       </button>
       <button class="tablinks" onclick="openTab(event, 'Graph 3', 'group2')">
-        Exploitation
+        Risk
       </button>
     </div>
     <div id="Graph 1" class="tabcontent group2">
       <h3>Graph 1: Profit Margin</h3>
-      <canvas id="g1" width="400" height="400"></canvas>
+      <canvas id="g1" width="400" height="300"></canvas>
     </div>
 
     <div id="Graph 2" class="tabcontent group2">
       <h3>Graph 2: Total Value</h3>
-      <canvas id="g2" width="400" height="400"></canvas>
+      <canvas id="g2" width="400" height="300"></canvas>
     </div>
 
     <div id="Graph 3" class="tabcontent group2">
-      <h3>Graph 3: Exploitation</h3>
-      <canvas id="g3" width="400" height="400"></canvas>
+      <h3>Graph 3: Risk</h3>
+      <canvas id="g3" width="400" height="300"></canvas>
     </div>
   </div>
+</section>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>

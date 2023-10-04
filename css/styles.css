@@ -9,22 +9,22 @@ body {
 
 #visualizer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 100%;
 }
 
-.tab-view {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5rem 2.5rem;
+#tab-view {
+  flex: 1;
   background-color: #A4BE7B;
   padding: 40px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(68, 120, 87, 0.2);
-  max-width: 100%;
+  margin: 0;
+}
+
+#graph-view {
+  flex: 1;
+  background-color: #E9E5D6;
+  padding: 40px;
+  margin: 0;
+  height: 100%;
 }
 
 h1,
@@ -52,7 +52,7 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 1.2rem;
-  overflow: hidden;
+  flex-wrap: wrap;
   border-radius: 5px;
   background-color: #E9E5D6;
 }

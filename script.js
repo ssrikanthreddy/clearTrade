@@ -194,12 +194,26 @@
               }]
           },
           options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
+            responsive: true,
+            maintainAspectRatio: true,
+            cutout: '40%',
+            layout: {
+                padding: {
+                    bottom: 70 // Adjust the value to offset the chart to the top
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        },
       });
   }
 
@@ -219,15 +233,28 @@
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            radius: '60%',
+            cutout: '40%',
+            layout: {
+                padding: {
+                    bottom: 240 // Adjust the value to offset the chart to the top
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true
                 }
             }
         },
-        radius: '10%', // Adjust the value as needed (percentage of the chart's radius)
-        responsive: true,
-        maintainAspectRatio: false
+        
     });
   }
 
@@ -251,7 +278,22 @@
                 y: {
                     beginAtZero: true
                 }
-            }
+            },
+            layout: {
+                padding: {
+                    bottom: 70
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            barPercentage: 1, // Adjust as needed
+            categoryPercentage: 0.5 // Adjust as needed
         }
     });
   }

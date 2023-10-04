@@ -3,76 +3,10 @@
   document.addEventListener('DOMContentLoaded', function() {
       // Code inside this block will run when the DOM is fully loaded
 
-      //Graph space START
-      // Initialize the first chart (Graph 1)
-      var ctx1 = document.getElementById('g1').getContext('2d');
-      chart1 = new Chart(ctx1, {
-          type: 'line',
-          data: {
-              labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
-              datasets: [{
-                  label: 'Data',
-                  data: [10, 20, 30, 40, 50],
-                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                  borderColor: 'rgba(255, 99, 132, 1)',
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
-
-      // Initialize the second chart (Graph 2)
-      var ctx2 = document.getElementById('g2').getContext('2d');
-      chart2 = new Chart(ctx2, {
-          type: 'pie',
-          data: {
-              labels: ['Label A', 'Label B', 'Label C', 'Label D', 'Label E'],
-              datasets: [{
-                  label: 'Data',
-                  data: [5, 10, 15, 20, 25],
-                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                  borderColor: 'rgba(54, 162, 235, 1)',
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
-
-        // Initialize the third chart (Graph 3)
-      var ctx3 = document.getElementById('g3').getContext('2d');
-      chart3 = new Chart(ctx3, {
-          type: 'bar',
-          data: {
-              labels: ['Label X', 'Label Y', 'Label Z'],
-              datasets: [{
-                  label: 'Data',
-                  data: [8, 16, 24],
-                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                  borderColor: 'rgba(75, 192, 192, 1)',
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
-    //Graph Space end
+      //Graphs
+      form_graph1();
+      form_graph2();
+      form_graph3();
 
       console.log("Loaded OK");
 
@@ -165,4 +99,77 @@
     // Update the chart data and re-render
     chart3.data.datasets[0].data = dataArray;
     chart3.update();
+  }
+
+  function form_graph1(){
+    var ctx1 = document.getElementById('g1').getContext('2d');
+      chart1 = new Chart(ctx1, {
+          type: 'line',
+          data: {
+              labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
+              datasets: [{
+                  label: 'Data',
+                  data: [10, 20, 30, 40, 50],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  }
+
+  function form_graph2(){
+    var ctx2 = document.getElementById('g2').getContext('2d');
+      chart2 = new Chart(ctx2, {
+          type: 'pie',
+          data: {
+              labels: ['Label A', 'Label B', 'Label C', 'Label D', 'Label E'],
+              datasets: [{
+                  label: 'Data',
+                  data: [5, 10, 15, 20, 25],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+
+  }
+
+  function form_graph3(){
+    var ctx3 = document.getElementById('g3').getContext('2d');
+    chart3 = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['Label X', 'Label Y', 'Label Z'],
+            datasets: [{
+                label: 'Data',
+                data: [8, 16, 24],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
   }

@@ -188,8 +188,8 @@
               datasets: [{
                   label: 'Data',
                   data: [10, 40, 15],
-                  backgroundColor: 'rgba(255,255,0, 0.7)',
-                  borderColor: 'rgba(255,255,0, 0.7)',
+                  backgroundColor: 'rgba(255,,1, 1.7)',
+                  borderColor: 'rgba(255,,1, 1.7)',
                   borderWidth: 1
               }]
           },
@@ -224,7 +224,10 @@
                     beginAtZero: true
                 }
             }
-        }
+        },
+        radius: '10%', // Adjust the value as needed (percentage of the chart's radius)
+        responsive: true,
+        maintainAspectRatio: false
     });
   }
 

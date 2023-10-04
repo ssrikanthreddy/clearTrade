@@ -14,7 +14,6 @@ body {
 #visualizer {
   display: flex;
   flex-wrap: wrap;
-  // height: 100%;
 }
 
 #tab-view {
@@ -22,7 +21,6 @@ body {
   background-color: $secondary;
   padding: 40px;
   margin: 0;
-  // box-sizing: border-box;
 }
 
 #graph-view {
@@ -30,7 +28,6 @@ body {
   background-color: $primary;
   padding: 40px;
   margin: 0;
-  // box-sizing: border-box;
   height: 100%;
 }
 
@@ -60,7 +57,6 @@ p {
   justify-content: center;
   margin-top: 1.2rem;
   flex-wrap: wrap;
-  // overflow: hidden;
   border-radius: 5px;
   background-color: $primary;
 }

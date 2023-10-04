@@ -23,6 +23,9 @@
       <button class="tablinks def" onclick="openTab(event, 'Supplier', 'group1')">
         Supplier
       </button>
+      <button class="tablinks" onclick="openTab(event, 'Importer', 'group1')">
+        Importer
+      </button>
       <button class="tablinks" onclick="openTab(event, 'Retailer', 'group1')">
         Retailer
       </button>
@@ -40,6 +43,16 @@
       <input class="input-field" type="number" id="supplier2">
     </div>
 
+    <div id="Importer" class="tabcontent group1">
+      <h3>Importer</h3>
+      <label>Acquiring Cost(₹):</label>
+      <input class="input-field" type="number" id="supplier1">
+      <label>Tranportation Cost(₹):</label>
+      <input class="input-field" type="number" id="supplier1">
+      <label>Wholesale Price(₹):</label>
+      <input class="input-field" type="number" id="supplier2">
+    </div>
+
     <div id="Retailer" class="tabcontent group1">
       <h3>Retailer</h3>
       <label>Purchase Cost(₹):</label>
@@ -54,8 +67,7 @@
       <input class="input-field" type="number" id="customer1">
     </div>
 
-    
-</div>
+  </div>
 
   <div id="graph-view" class="tab-view">
     <div class="tab">

@@ -30,7 +30,7 @@
       // Initialize the second chart (Graph 2)
       var ctx2 = document.getElementById('g2').getContext('2d');
       chart2 = new Chart(ctx2, {
-          type: 'bar',
+          type: 'pie',
           data: {
               labels: ['Label A', 'Label B', 'Label C', 'Label D', 'Label E'],
               datasets: [{

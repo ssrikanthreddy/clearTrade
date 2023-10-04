@@ -245,7 +245,7 @@
         options: {
             responsive: true,
             maintainAspectRatio: true,
-            radius: '60%',
+            radius: '80%',
             cutout: '40%',
             layout: {
                 padding: {

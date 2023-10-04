@@ -13,8 +13,9 @@
 </head>
 
 <body>
-<div id="visualizer">
-  <div class="tab-view">
+  <div id="visualizer">
+<section id="tab-view">
+  <div>
     <h1>Hello, Welcome to clearTrade!</h1>
     <p class="units">Units of trade: Carton of 6.(Number are for per-unit)</p>
 
@@ -68,8 +69,9 @@
     </div>
 
   </div>
-
-  <div id="graph-view" class="tab-view">
+</section>
+<section id="graph-view">
+  <div>
     <div class="tab">
       <button class="tablinks def2" onclick="openTab(event, 'Graph 1', 'group2')">
         Profit Margin
@@ -83,19 +85,24 @@
     </div>
     <div id="Graph 1" class="tabcontent group2">
       <h3>Graph 1: Profit Margin</h3>
-      <canvas id="g1" width="400" height="400"></canvas>
+      <canvas id="g1" width="400" height="300"></canvas>
     </div>
 
     <div id="Graph 2" class="tabcontent group2">
       <h3>Graph 2: Total Value</h3>
-      <canvas id="g2" width="400" height="400"></canvas>
+      <canvas id="g2" width="400" height="300"></canvas>
     </div>
 
     <div id="Graph 3" class="tabcontent group2">
       <h3>Graph 3: Risk</h3>
+<<<<<<< Updated upstream
       <canvas id="g3" width="400" height="400"></canvas>
+=======
+      <canvas id="g3" width="400" height="300"></canvas>
+>>>>>>> Stashed changes
     </div>
   </div>
+</section>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>

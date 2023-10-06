@@ -1,0 +1,12 @@
+Summerize the financial situation of this supply 
+using the given information, numbers in rupees(money) and also find out 
+who's getting exploiting and who's is 
+the exploiter and if someone's profit margin 
+is too high: Supplier manufacturing cost is  ${inputData['supplier1']}
+and the supplier sells to importer at ${inputData['supplier2']},
+importer buys from supplier at${inputData['importer1']},
+importer pays ${inputData['importer2']} for transporting,
+importer sells from to retailer for ${inputData['importer3']},
+retailer buys from importer for${inputData['retail1']},
+retailer sells to customer for ${inputData['retail2']},
+customer buys from retailer for ${inputData['customer1']}.

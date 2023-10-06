@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>clearTrade</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./utils/favicon.ico">
+</head>
+
+<body>
+  <!-- Chat Bot -->
+<section id="ai-chat">
+  <div id="chat-circle">
+    <div class="chat-overlay"></div>
+    <div class="chat-btn"></div>
+    </div>
+    <div id="chat-box" class="chat-window">
+        <div class="chat-header">
+            <span class="chat-title">AI Summarizer✨</span>
+            <button class="close-btn" onclick="closeChat()">x</button>
+        </div>
+        <div class="chat-footer">
+            <div class="summary">
+              <!-- Chat content goes here -->
+              Supplier sells to Importer at a 20% profit margin. 
+              Importer's transportation cost is high relative to 
+              the other costs. Retailer and Supplier have healthy 
+              profit margins, but Importer's transportation cost 
+              may need reevaluation for optimization.
+          </div>
+        </div>
+    </div>
+    <!-- AI END -->
+  </section>
+
+  <div id="visualizer">
+  <section id="tab-view">
+  <div>
+    <h1>ClearTrade</h1>
+    <p class="units">Units of trade: Carton of 6.(Number are for per-unit)</p>
+
+    <!-- Tab links 1 -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Supplier', 'group1')">
+        Supplier
+      </button>
+      <button class="tablinks def" onclick="openTab(event, 'Importer', 'group1')">
+        Importer
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Retailer', 'group1')">
+        Retailer
+      </button>
+      <button class="tablinks" style="border-right: none;" onclick="openTab(event, 'Customer', 'group1')">
+        Customer
+      </button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Supplier" class="tabcontent group1">
+      <label>Production Cost(₹):</label>
+      <input class="input-field" type="number" id="supplier1">
+      <label>Selling Price(₹):</label>
+      <input class="input-field" type="number" id="supplier2">
+    </div>
+
+    <div id="Importer" class="tabcontent group1">
+      <label>Acquiring Cost(₹):</label>
+      <input class="input-field" type="number" id="importer1">
+      <label>Tranportation Cost(₹):</label>
+      <input class="input-field" type="number" id="importer2">
+      <label>Wholesale Price(₹):</label>
+      <input class="input-field" type="number" id="importer3">
+    </div>
+
+    <div id="Retailer" class="tabcontent group1">
+      <label>Purchase Cost(₹):</label>
+      <input class="input-field" type="number" id="retail1">
+      <label>Re-sale Value(₹):</label>
+      <input class="input-field" type="number" id="retail2">
+    </div>
+
+    <div id="Customer" class="tabcontent group1">
+      <label>Purchase Cost(₹):</label>
+      <input class="input-field" type="number" id="customer1">
+    </div>
+
+  </div>
+</section>
+<section id="graph-view">
+  <div>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Graph 1', 'group2')">
+        Profit Margin
+      </button>
+      <button class="tablinks def2" onclick="openTab(event, 'Graph 2', 'group2')">
+        Total Value
+      </button>
+      <button class="tablinks" style="border-right: none;" onclick="openTab(event, 'Graph 3', 'group2')">
+        Risk
+      </button>
+    </div>
+    <div id="Graph 1" class="tabcontent group2">
+      <!-- <h3>Profit Margin</h3> -->
+      <canvas id="g1" width="400" height="400"></canvas>
+    </div>
+
+    <div id="Graph 2" class="tabcontent group2">
+      <!-- <h3>Total Value</h3> -->
+      <canvas id="g2" width="400" height="400"></canvas>
+    </div>
+
+    <div id="Graph 3" class="tabcontent group2">
+      <!-- <h3>Graph 3: Risk</h3> -->
+      <canvas id="g3" width="400" height="400"></canvas>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/scripts/script.js"></script>
+  <script type="module" src="/scripts/app.js "></script>
+</body>
+</html>

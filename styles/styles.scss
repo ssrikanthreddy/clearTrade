@@ -1,0 +1,250 @@
+$primary: #7da30c;
+$secondary: #0e2714;
+$accents: #c1ff72;
+$Poppins: 'Poppins', sans-serif;
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#visualizer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for the chat bot icon */
+#chat-circle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  /* Professional blue */
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the chat bot icon image */
+.chat-btn {
+  background-image: url("./bot.png");
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+/* Style for the chat overlay */
+.chat-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* Style for the chat box */
+#chat-box {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  font: $Poppins;
+  font-size: 1rem;
+  right: 20px;
+  padding: 45px;
+  width: 400px;
+  max-height: 80%;
+  background-color: #0f492f;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1001;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #c1ff72;
+  /* Professional font */
+}
+
+.chat-title {
+  font: $Poppins;
+  font-size: 1.5rem;
+  font-style: bold;
+  font-weight: bold;
+  color: #c1ff72;
+}
+
+/* Style for the close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #b0d627;
+  /* Match the bot icon color */
+}
+
+/* Add a hover effect for the close button */
+.close-btn:hover {
+  color: rgb(219, 100, 100);
+}
+
+/* Style for chat content */
+.chat-content {
+  padding: 20px;
+  /* Add padding for better spacing inside the chat box */
+  font-size: 16px;
+  /* Adjust font size for readability */
+  color: #333;
+  /* Professional text color */
+}
+
+
+#tab-view {
+  flex: 1;
+  background-color: $secondary;
+  padding: 50px 100px 100px 100px;
+  margin: 0;
+  background: linear-gradient(to right, #0e2714, #0e2714fe);
+
+}
+
+#graph-view {
+  flex: 1;
+  background-color: $primary;
+  padding: 30px 100px 100px 100px;
+  margin: 0;
+  background: linear-gradient(to right, #8dab21, #8dab21f2);
+}
+
+h1 {
+  font-family: $Poppins;
+  color: #c1ff72;
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-family: $Poppins;
+  color: #c1ff72;
+  margin: 0;
+}
+
+p {
+  font-family: $Poppins;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c1ff72;
+}
+
+.units {
+  font-family: $Poppins;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #c1ff72;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+  // background-color: $primary;
+  margin-top: 50px;
+}
+
+.tab button {
+  font-family: $Poppins;
+  font-weight: 400;
+  flex-grow: 1;
+  color: #c1ff72;
+  background-color: #21502c;
+  border: 5px;
+  // border-color: $accents;
+  border-right: 1px solid #c2ff72a2;
+  // outline: 1px solid #c1ff72;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #c1ff72;
+  color: #0e2714;
+}
+
+.tab button:focus {
+  background-color: #c1ff72;
+  color: #0e2714;
+}
+
+.tabcontent label {
+  font-family: $Poppins;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #c1ff72;
+}
+
+.tabcontent input {
+  color: $accents;
+  font-size: 1rem;
+  height: 1.8rem;
+  margin-bottom: 35px;
+  background-color: $primary;
+  padding: 4px;
+  border: $primary;
+  border-radius: 2.5px;
+}
+
+.tabcontent {
+  font-family: $Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+canvas {
+  margin-top: 30px;
+}
+
+/* Remove spinners from number input fields */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* For Firefox, which uses a different style */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.summary {
+  font-family: $Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5rem 0;
+}

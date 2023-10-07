@@ -26,6 +26,7 @@ body {
 .chat-btn {
   background-image: url("./bot.png");
   background-size: cover;
+  background-color: #7da30c;
   width: 60px;
   height: 60px;
   background-position: center;

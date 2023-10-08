@@ -68,6 +68,23 @@
     // Get all the input elements
     var inputFields = document.querySelectorAll('.input-field');
 
+
+    const textContainer = document.getElementById('text-container');
+    const animatedText = document.getElementById('animated-text');
+    const text = document.getElementById('animated-text').innerHTML;
+  
+    let index = 0;
+  
+    function animateText() {
+      animatedText.textContent += text[index];
+      index++;
+      if (index < text.length) {
+        setTimeout(animateText, 10); // Adjust the delay to control speed
+      }
+    }
+  
+    
+
 //Main function
 document.addEventListener('DOMContentLoaded', function() {
     // Code inside this block will run when the DOM is fully loaded
@@ -389,14 +406,16 @@ customer buys from retailer for ${inputData['customer1']}.`);
     });
   }
 
-    document.querySelector('#chat-circle').addEventListener('click', function() {
-    document.getElementById('chat-box').style.display = 'block';
-    document.querySelector('.chat-overlay').style.display = 'block';
-});
+document.querySelector('#chat-circle').addEventListener('click', function() {
+document.getElementById('chat-box').style.display = 'block';
+document.querySelector('.chat-overlay').style.display = 'block';
+animatedText.textContent = '';
+animateText();
+    });
 
 document.querySelector('.chat-overlay').addEventListener('click', function() {
-    document.getElementById('chat-box').style.display = 'none';
-    document.querySelector('.chat-overlay').style.display = 'none';
+document.getElementById('chat-box').style.display = 'none';
+document.querySelector('.chat-overlay').style.display = 'none';
 });
 
 
@@ -405,4 +424,32 @@ function closeChat() {
     document.querySelector('.chat-overlay').style.display = 'none';
   }
 
-  
+// const userInput = document.getElementById('user-input').value;
+const userInput = "Hey, How are you doing?";  
+fetch('https://api.openai.com/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer' + process.env.OPENAI_API_KEY,
+  },
+  body: JSON.stringify({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'system',
+        content: 'You are a helpful assistant helping farmers trade better.',
+      },
+      {
+        role: 'user',
+        content: userInput,
+      },
+    ],
+  }),
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data.choices[0].message.content);
+})
+.catch(error => {
+  console.error('Error:', error);
+});

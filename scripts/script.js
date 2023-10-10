@@ -102,49 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var londonButton2 = document.querySelector(".tablinks.def2");
         londonButton2.click();
 
-    //AiBotStuff
-    document.getElementById('chat-circle').addEventListener('click', function() {
-        // Get all the input fields
-        var inputFields = document.querySelectorAll('.input-field');
-    
-        // Create an object to store the input values
-        var inputData = {};
-    
-        // Loop through the input fields
-        inputFields.forEach(function(input) {
-          inputData[input.id] = input.value;
-        });
-
-        //Inputs
-        var s1 = supply1.value;
-        var s2 = supply2.value;
-
-        var i1 = importer1.value;
-        var i2 = imoprter2.value;
-        var i3 = imoprter3.value;
-        
-        var r1 = retail1.value;
-        var r2 = retail2.value;
-
-        var c1 = customer1.value;
-        
-    
-        // Print the input values to the console
-        console.log(`Summerize the financial situation of this supply 
-using the given information, numbers in rupees(money) and also find out 
-who's getting exploiting and who's is 
-the exploiter and if someone's profit margin 
-is too high: Supplier manufacturing cost is  ${inputData['supplier1']}
-and the supplier sells to importer at ${inputData['supplier2']},
-importer buys from supplier at${inputData['importer1']},
-importer pays ${inputData['importer2']} for transporting,
-importer sells from to retailer for ${inputData['importer3']},
-retailer buys from importer for${inputData['retail1']},
-retailer sells to customer for ${inputData['retail2']},
-customer buys from retailer for ${inputData['customer1']}.`);
-
-    });
-
 });
 
   function openTab(evt, cityName, group) {
@@ -406,50 +363,8 @@ customer buys from retailer for ${inputData['customer1']}.`);
     });
   }
 
-document.querySelector('#chat-circle').addEventListener('click', function() {
-document.getElementById('chat-box').style.display = 'block';
-document.querySelector('.chat-overlay').style.display = 'block';
-animatedText.textContent = '';
-animateText();
-    });
-
-document.querySelector('.chat-overlay').addEventListener('click', function() {
-document.getElementById('chat-box').style.display = 'none';
-document.querySelector('.chat-overlay').style.display = 'none';
-});
-
-
 function closeChat() {
     document.getElementById("chat-box").style.display = "none";
     document.querySelector('.chat-overlay').style.display = 'none';
+    window.been_called = false;
   }
-
-// const userInput = document.getElementById('user-input').value;
-const userInput = "Hey, How are you doing?";  
-fetch('https://api.openai.com/v1/chat/completions', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer' + process.env.OPENAI_API_KEY,
-  },
-  body: JSON.stringify({
-    model: 'gpt-3.5-turbo',
-    messages: [
-      {
-        role: 'system',
-        content: 'You are a helpful assistant helping farmers trade better.',
-      },
-      {
-        role: 'user',
-        content: userInput,
-      },
-    ],
-  }),
-})
-.then(response => response.json())
-.then(data => {
-  console.log(data.choices[0].message.content);
-})
-.catch(error => {
-  console.error('Error:', error);
-});

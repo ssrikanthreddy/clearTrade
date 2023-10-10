@@ -240,4 +240,25 @@ input[type=number] {
   margin: 1rem 0;
 }
 
+#blinking-cursor {
+  display: inline-block;
+  width: 8px; /* Adjust the width of the cursor */
+  height: 16px; /* Adjust the height of the cursor */
+  background-color: #ffffff; /* Color of the cursor */
+  position: absolute;
+  animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

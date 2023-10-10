@@ -1,13 +1,14 @@
 let animationInProgress = false;
 
 function animate(response) {
+    console.log("Animate called");
 
     if (animationInProgress) {
         return; // If animation is in progress, do nothing
     }
 
     animationInProgress = true;
-    
+
     document.getElementById("blinking-cursor").style.display = 'none';
     const animatedText = document.getElementById('animated-text');
     const cursor = document.getElementById('blinking-cursor');

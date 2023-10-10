@@ -9,6 +9,7 @@ function bot(){
 
     fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
+    mode: 'no-cors', // Add this line
     headers: {
         'Content-Type': 'application/json',
         'Authorization': API_KEY,
@@ -54,4 +55,3 @@ document.querySelector('.chat-overlay').style.display = 'none';
     });
 
 
-    

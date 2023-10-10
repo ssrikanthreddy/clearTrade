@@ -2,16 +2,10 @@ let animationInProgress = false;
 
 function animate(response) {
     console.log("Animate called");
-
-    if (animationInProgress) {
-        return; // If animation is in progress, do nothing
-    }
-
-    animationInProgress = true;
+    
 
     document.getElementById("blinking-cursor").style.display = 'none';
     const animatedText = document.getElementById('animated-text');
-    const cursor = document.getElementById('blinking-cursor');
     const text = response;
     let index = 0;
 
@@ -22,6 +16,7 @@ function animate(response) {
             setTimeout(animateText,15); // Set a delay of 20ms
         }
     }
+    
     animateText();
 }
 

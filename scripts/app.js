@@ -52,4 +52,6 @@ document.querySelector('.chat-overlay').addEventListener('click', function() {
 document.getElementById('chat-box').style.display = 'none';
 document.querySelector('.chat-overlay').style.display = 'none';
     });
+
+
     

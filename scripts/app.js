@@ -4,7 +4,7 @@ import animate from './animate.js';
 
 function bot(){
     console.log("bot called");
-    const API_KEY = 'earer ' + OPENAI_API_KEY;
+    const API_KEY = 'Bearer ' + OPENAI_API_KEY;
     const userInput = generatePrompt();
 
     fetch('https://api.openai.com/v1/chat/completions', {
@@ -29,9 +29,7 @@ function bot(){
     })
     .then(response => response.json())
     .then(data => { 
-    var response = `Here, we've made sure to get the cursor element outside of the animateText function to avoid unnecessary DOM queries. Additionally, I've adjusted the timing to slow down the cursor blinking. You can further tweak the delay (in milliseconds) as needed.
-
-    Remember to adjust the delay as per your preference for the blinking effect.`;
+    var response = data.choices[0].message.content;
     //console.log(`Bot says ${response}`);
     animate(response);
     })
@@ -43,16 +41,11 @@ function bot(){
 }
 export default bot;
 
-window.been_called = false;
-
 document.querySelector('#chat-circle').addEventListener('click', function() {
     document.getElementById('chat-box').style.display = 'block';
     document.querySelector('.chat-overlay').style.display = 'block';
     animatedText.textContent = '';
-    if (window.been_called == false){
-        window.been_called = true;
-        bot();
-    }
+    bot();
     });
     
 document.querySelector('.chat-overlay').addEventListener('click', function() {

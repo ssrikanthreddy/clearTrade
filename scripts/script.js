@@ -83,7 +83,7 @@
       }
     }
   
-    
+
 
 //Main function
 document.addEventListener('DOMContentLoaded', function() {

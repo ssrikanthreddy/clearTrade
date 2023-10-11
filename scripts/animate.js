@@ -1,8 +1,7 @@
-let animationInProgress = false;
 
 function animate(response) {
     console.log("Animate called");
-    
+
 
     document.getElementById("blinking-cursor").style.display = 'none';
     const animatedText = document.getElementById('animated-text');

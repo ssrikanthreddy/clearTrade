@@ -367,4 +367,7 @@ function closeChat() {
     document.getElementById("chat-box").style.display = "none";
     document.querySelector('.chat-overlay').style.display = 'none';
   }
-  
+
+  document.getElementById('overlay').addEventListener('click', function() {
+    closeChat()
+  });
